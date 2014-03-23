@@ -1,5 +1,5 @@
 Template.hotelItem.helpers({
-  ownHotel: function()  {
+  ownsHotel: function()  {
     return this.userId == Meteor.userId();
   },
 
