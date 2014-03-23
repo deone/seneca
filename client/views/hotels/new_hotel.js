@@ -3,7 +3,7 @@ Template.newHotel.events({
     e.preventDefault();
 
     var hotel = {
-      name: $(e.target).find('[name=hotel-name]').val(),
+      name: $(e.target).find('[name=name]').val(),
       website: $(e.target).find('[name=website]').val(),
       description: $(e.target).find('[name=description]').val()
     }
@@ -12,7 +12,7 @@ Template.newHotel.events({
       if (error)
         return alert(error.reason);
 
-      Router.go('hotelPage', {_id: id});
+      Router.go('hotelsList');
     });
   }
 });
