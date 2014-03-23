@@ -1,0 +1,29 @@
+<template name="editHotel">
+  <form class="main">
+    <div class="control-group">
+      <label class="control-label" for="name">Name of Hotel</label>
+      <div class="controls">
+        <input name="name" type="text" value="{{name}}" placeholder="Hotel Name"/>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="website">Website</label>
+      <div class="controls">
+        <input name="website" type="text" value="{{website}}" placeholder="Website"/>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <div class="controls">
+        <input type="submit" value="Submit" class="btn btn-primary submit"/>
+      </div>
+    </div>
+    <hr/>
+    <div class="control-group">
+      <div class="controls">
+        <a class="btn btn-danger delete" href="#">Delete Hotel</a>
+      </div>
+    </div>
+  </form>
+</template>
