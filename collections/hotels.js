@@ -1,8 +1,8 @@
 Hotels = new Meteor.Collection('hotels');
 
 Hotels.allow({
-  update: ownsHotel,
-  remove: ownsHotel
+  update: ownsDocument,
+  remove: ownsDocument
 });
 
 Meteor.methods({
