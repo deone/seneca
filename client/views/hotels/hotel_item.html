@@ -2,6 +2,12 @@
   <div class="hotel">
     <div class="hotel-content">
       <h3><a href="{{website}}">{{name}}</a><span>{{domain}}</span></h3>
+      <p>
+        listed by {{manager}}
+        {{#if ownHotel}}
+          <a href="{{pathFor 'editHotel'}}">Edit</a>
+        {{/if}}
+      </p>
     </div>
     <a href="{{pathFor 'hotelPage'}}" class="view btn">View</a>
   </div>

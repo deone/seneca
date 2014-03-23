@@ -1,5 +1,10 @@
 Hotels = new Meteor.Collection('hotels');
 
+Hotels.allow({
+  update: ownsHotel,
+  remove: ownsHotel
+});
+
 Meteor.methods({
   post: function(hotelAttributes)  {
     var user = Meteor.user(), hotelWithSameWebsite = Hotels.findOne({website: hotelAttributes.website});
