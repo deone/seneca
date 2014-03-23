@@ -1,4 +1,4 @@
-if (Hotels.find().count() === 0)  {
+/*if (Hotels.find().count() === 0)  {
   Hotels.insert({
     name: 'Alexander Plaza',
     manager: 'Dayo Osikoya',
@@ -16,4 +16,4 @@ if (Hotels.find().count() === 0)  {
     manager: 'Layi Osikoya',
     website: 'http://movenpick.com/'
   });
-}
+}*/
