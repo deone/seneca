@@ -5,6 +5,13 @@ Hotels.allow({
   remove: ownsDocument
 });
 
+Hotels.deny({
+  update: function(userId, hotel, fieldNames) {
+    // may only edit the following two fields:
+    return (_.without(fieldNames, 'name', 'website').length > 0);
+  }
+});
+
 Meteor.methods({
   post: function(hotelAttributes)  {
     var user = Meteor.user(), hotelWithSameWebsite = Hotels.findOne({website: hotelAttributes.website});
