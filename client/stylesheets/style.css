@@ -5,15 +5,8 @@
     margin-bottom: 10px;
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.15);
 }
-/*body	{
-    background: #eee;
+body	{
     color: #666;
-}*/
-.navbar	{
-    margin-bottom: 10px;
-}
-.navbar .navbar-inner	{
-    border-radius: 0px 0px 3px 3px;
 }
 #spinner    {
     height: 300px;
