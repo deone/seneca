@@ -9,10 +9,13 @@ Template.newHotel.events({
     }
 
     Meteor.call('post', hotel, function(error, id)  {
-      if (error)
-        return alert(error.reason);
-
-      Router.go('hotelsList');
+      if (error)  {
+        throwError(error.reason);
+        if (error.error === 302)
+          Router.go('hotelPage', {_id: error.details});
+      } else  {
+        Router.go('hotelPage', {_id: id});
+      }
     });
   }
 });
