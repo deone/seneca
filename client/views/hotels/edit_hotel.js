@@ -1,11 +1,11 @@
 Template.editHotel.events({
-  'submit form': function(e)  {
+  /* 'submit form': function(e)  {
     e.preventDefault();
 
     var currentHotelId = this._id;
 
     var hotelProperties = {
-      website: $(e.target).find('[name=website]').val(),
+      type: $(e.target).find('[name=type]').val(),
       name: $(e.target).find('[name=name]').val()
     }
 
@@ -17,7 +17,7 @@ Template.editHotel.events({
         Router.go('hotelPage', {_id: currentHotelId});
       }
     });
-  },
+  }, */
 
   'click .delete': function(e)  {
     e.preventDefault();
