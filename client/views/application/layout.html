@@ -1,7 +1,16 @@
 <template name="layout">
     {{> header}}
-    <div id="main" class="container-fluid">
-      {{> errors}}
-      {{yield}}
+    <div class="container appbody">
+      <div class="row"> 
+        <div class="col-md-3" role="main">
+        </div>
+        <div class="col-md-7" role="main">
+          {{> errors}}
+          {{yield}}
+        </div>
+        <div class="col-md-2" role="main">
+        </div>
+      </div>
     </div>
+    {{> footer}}
 </template>

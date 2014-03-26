@@ -6,7 +6,7 @@
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.15);
 }
 body	{
-    color: #666;
+
 }
 #spinner    {
     height: 300px;
@@ -100,4 +100,16 @@ body	{
 .load-more:hover    {
     text-decoration: none;
     background: rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+  margin-top: 100px;
+  text-align: center;
+  border-top: 1px solid #e5e5e5;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.appbody  {
+  min-height: 320px;
 }
