@@ -8,13 +8,14 @@ Hotels.allow({
 Hotels.deny({
   update: function(userId, hotel, fieldNames) {
     // may only edit the following two fields:
-    return (_.without(fieldNames, 'name', 'website').length > 0);
+    return (_.without(fieldNames, 'type', 'name').length > 0);
   }
 });
 
 Meteor.methods({
   post: function(hotelAttributes)  {
-    var user = Meteor.user(), hotelWithSameWebsite = Hotels.findOne({website: hotelAttributes.website});
+    var user = Meteor.user();
+    // var hotelWithSameWebsite = Hotels.findOne({website: hotelAttributes.website});
 
     // ensure the user is logged in
     if (!user)
@@ -25,12 +26,12 @@ Meteor.methods({
       throw new Meteor.Error(422, 'Please fill in a name');
 
     // check that there are no previous hotels with the same website
-    if (hotelAttributes.website && hotelWithSameWebsite)  {
-      throw new Meteor.Error(302, 'This hotel has already been posted', hotelWithSameWebsite._id);
-    }
+    // if (hotelAttributes.website && hotelWithSameWebsite)  {
+      // throw new Meteor.Error(302, 'This hotel has already been posted', hotelWithSameWebsite._id);
+    // }
 
     // pick out the whitelisted keys
-    var hotel = _.extend(_.pick(hotelAttributes, 'website', 'name', 'description'), {
+    var hotel = _.extend(_.pick(hotelAttributes, 'type', 'name', 'city'), {
       userId: user._id,
       manager: user.emails[0].address,
       listed: new Date().getTime()

@@ -3,9 +3,9 @@ Template.newHotel.events({
     e.preventDefault();
 
     var hotel = {
+      type: $(e.target).find('[name=type]').val(),
       name: $(e.target).find('[name=name]').val(),
-      website: $(e.target).find('[name=website]').val(),
-      description: $(e.target).find('[name=description]').val()
+      city: $(e.target).find('[name=city]').val()
     }
 
     Meteor.call('post', hotel, function(error, id)  {
