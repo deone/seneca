@@ -1,15 +1,17 @@
 <template name="hotelsList">
-  <div class="col-md-3">
-  </div>
-
-  <div class="col-md-7">
-    <div class="hotels">
-      {{#each hotels}}
-        {{> hotelItem}}
-      {{/each}}
+  <div>
+    <div class="col-md-2">
     </div>
-  </div>
 
-  <div class="col-md-2">
+    <div class="col-md-8">
+      <div class="hotels">
+        {{#each hotels}}
+          {{> hotelItem}}
+        {{/each}}
+      </div>
+    </div>
+
+    <div class="col-md-2">
+    </div>
   </div>
 </template>
