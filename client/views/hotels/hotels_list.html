@@ -4,11 +4,11 @@
     </div>
 
     <div class="col-md-8">
-      <div class="hotels">
-        {{#each hotels}}
-          {{> hotelItem}}
-        {{/each}}
-      </div>
+      {{#each hotels}}
+        {{> hotelItem}}
+      {{else}}
+        <p>Oops! You have no listings.</p>
+      {{/each}}
     </div>
 
     <div class="col-md-2">
