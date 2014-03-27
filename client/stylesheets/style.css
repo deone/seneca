@@ -130,3 +130,7 @@ body	{
 .s-modal-body {
   min-height: 360px;
 }
+
+.capitalize {
+  text-transform: capitalize;
+}

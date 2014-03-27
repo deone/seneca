@@ -1,7 +1,7 @@
 <template name="hotelItem">
   <div class="hotel">
     <div class="hotel-content">
-      <h3><a href="{{pathFor 'hotelPage'}}">{{name}}</a></h3>
+      <h3><a href="{{pathFor 'hotelPage'}}">{{name}}</a><span class="capitalize">{{type}}</span></h3>
       <p>
         listed by {{manager}}
         {{#if ownsHotel}}
@@ -9,6 +9,5 @@
         {{/if}}
       </p>
     </div>
-    <!-- <a href="{{pathFor 'hotelPage'}}" class="view btn">View</a> -->
   </div>
 </template>
