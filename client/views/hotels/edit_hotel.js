@@ -22,12 +22,26 @@ Template.editHotel.events({
   'click .delete': function(e)  {
     e.preventDefault();
 
-    if (confirm("Delete this hotel?"))  {
-      var currentHotelId = this._id;
-      Hotels.remove(currentHotelId);
-      Router.go('hotelsList');
+    var currentHotelId = this._id;
+    Hotels.remove(currentHotelId);
+    // Save reason
+    // Reason.insert({type: 'delete hotel', message: 'I'm fed up with your service'});
+    Router.go('hotelsList');
+  },
+
+  'click #show-delete-info': function(e)  {
+    var checkbox = document.getElementById('understand');
+    var deleteButton = document.getElementById('delete');
+
+    checkbox.onchange = function()  {
+      if(this.checked)  {
+        deleteButton.disabled = false;
+      } else  {
+        deleteButton.disabled = true;
+      }
     }
   }
+
 });
 
 Template.editHotel.rendered = function()  {
@@ -35,9 +49,7 @@ Template.editHotel.rendered = function()  {
     var options = {
       backdrop: 'static',
     };
-
     $('#welcome').modal(options);
   }
-
   Session.set('newHotel', false);
 };
