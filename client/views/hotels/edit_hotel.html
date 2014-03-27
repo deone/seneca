@@ -7,9 +7,37 @@
       <div class="page-header">
         <h1>Edit Listing</h1>
       </div>
-      <form class="form-horizontal" role="form">
-        <button type="submit" class="btn btn-danger delete">Delete Hotel</button>
-      </form>
+      <p>If you wish, you can permanently <a href="#" id="show-delete-info" data-toggle="modal" data-target="#delete-info">delete your listing</a>.</p>
+
+      <div class="modal fade" id="delete-info" tabindex="-1" aria-labelledby="delete-infoLabel" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title" id="delete-infoLabel">Delete Listing</h4>
+            </div>
+            <div class="modal-body">
+              <p>IMPORTANT! Deleting a listing is permanent and cannot be reversed. You may wish to hide your listing instead.</p>
+
+              <p>If you delete this listing:</p>
+              <ul>
+                <li>This listing will be deleted from the site forever. You will not be able to retrieve this listing.</li>
+                <li>Your other account details will remain unchanged. Your profile and any other listings will remain associated with your account.</li>
+                <li>All emails associated with the deleted listing will remain accessible.</li>
+                <li>All reviews will remain visible in profiles, but will not be associated with a listing.</li>
+              </ul>
+              <p>Tell us why you're deleting your listing (optional):</p>
+              <form>
+                <textarea class="form-control" rows="3"></textarea>
+                <input type="checkbox" id="understand"> <span class="alert-danger">I understand that clicking the button below will completely delete my listing from the site and it cannot be recovered.</span>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" id="delete" data-dismiss="modal" class="btn btn-danger delete" disabled>Delete Hotel</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div class="modal fade" id="welcome" tabindex="-1" role="dialog" aria-labelledby="welcomeLabel" aria-hidden="true">
         <div class="modal-dialog s-modal-dialog">
