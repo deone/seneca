@@ -113,3 +113,8 @@ body	{
 .app-body  {
   min-height: 320px;
 }
+
+.error  {
+  border-radius: 0;
+  margin-bottom: 0;
+}
