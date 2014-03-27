@@ -14,6 +14,7 @@ Template.newHotel.events({
         // if (error.error === 302)
           // Router.go('hotelPage', {_id: error.details});
       } else  {
+        Session.set('newHotel', true);
         Router.go('editHotel', {_id: id});
       }
     });

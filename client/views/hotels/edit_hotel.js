@@ -31,9 +31,13 @@ Template.editHotel.events({
 });
 
 Template.editHotel.rendered = function()  {
-  var options = {
-    backdrop: 'static'
-  };
+  if (Session.get('newHotel'))  {
+    var options = {
+      backdrop: 'static',
+    };
 
-  $('#welcome').modal(options);
+    $('#welcome').modal(options);
+  }
+
+  Session.set('newHotel', false);
 };
