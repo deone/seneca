@@ -1,3 +1,17 @@
 <template name="landing">
-  <p>Home Page</p>
+  <div class="hotels-list">
+    <div class="col-md-2">
+    </div>
+
+    <div class="col-md-8">
+      <div class="hotels">
+        {{#each hotels}}
+          {{> hotelItem}}
+        {{/each}}
+      </div>
+    </div>
+
+    <div class="col-md-2">
+    </div>
+  </div>
 </template>
