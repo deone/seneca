@@ -19,3 +19,8 @@ Template.newHotel.events({
     });
   }
 });
+
+Template.newHotel.rendered = function() {
+  var input = (document.getElementById('city'));
+  var autocomplete = new google.maps.places.Autocomplete(input);
+};
