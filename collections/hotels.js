@@ -15,20 +15,25 @@ Hotels.deny({
 Meteor.methods({
   post: function(hotelAttributes)  {
     var user = Meteor.user();
-    // var hotelWithSameWebsite = Hotels.findOne({website: hotelAttributes.website});
 
-    // ensure the user is logged in
     if (!user)
       throw new Meteor.Error(401, "You need to login to post new stories");
 
-    // ensure the hotel has a name
+    if (!hotelAttributes.type)
+      throw new Meteor.Error(422, 'Please specify hotel type');
+
     if (!hotelAttributes.name)
-      throw new Meteor.Error(422, 'Please fill in a name');
+      throw new Meteor.Error(422, 'Please fill in a name'); 
+
+    if (!hotelAttributes.city)
+      throw new Meteor.Error(422, 'Please fill in city');
 
     // check that there are no previous hotels with the same website
-    // if (hotelAttributes.website && hotelWithSameWebsite)  {
-      // throw new Meteor.Error(302, 'This hotel has already been posted', hotelWithSameWebsite._id);
-    // }
+    /* var hotelWithSameWebsite = Hotels.findOne({website: hotelAttributes.website});
+
+    if (hotelAttributes.website && hotelWithSameWebsite)  {
+      throw new Meteor.Error(302, 'This hotel has already been posted', hotelWithSameWebsite._id);
+    } */
 
     // pick out the whitelisted keys
     var hotel = _.extend(_.pick(hotelAttributes, 'type', 'name', 'city'), {

@@ -3,7 +3,7 @@ Template.newHotel.events({
     e.preventDefault();
 
     var hotel = {
-      type: $(e.target).find('[name=type]').val(),
+      type: $(e.target).find('[name=type]:checked').val(),
       name: $(e.target).find('[name=name]').val(),
       city: $(e.target).find('[name=city]').val()
     }
