@@ -29,3 +29,11 @@ Template.editHotel.events({
     }
   }
 });
+
+Template.editHotel.rendered = function()  {
+  var options = {
+    backdrop: 'static'
+  };
+
+  $('#welcome').modal(options);
+};

@@ -114,11 +114,19 @@ body	{
   min-height: 320px;
 }
 
-.error  {
+.hotels-list  {
+  padding-top: 20px;
+}
+
+.s-alert  {
   border-radius: 0;
   margin-bottom: 0;
 }
 
-.hotels-list  {
-  padding-top: 20px;
+.s-modal-dialog {
+  margin-top: 80px;
+}
+
+.s-modal-body {
+  min-height: 360px;
 }
