@@ -22,10 +22,14 @@ Template.editHotel.events({
   'click .delete': function(e)  {
     e.preventDefault();
 
+    // Save reason
+    var reason = document.getElementById('reason').value;
+    Reasons.insert({userId: Meteor.user()._id, for: 'delete hotel', message: reason});
+
+    // Delete hotel
     var currentHotelId = this._id;
     Hotels.remove(currentHotelId);
-    // Save reason
-    // Reason.insert({type: 'delete hotel', message: 'I'm fed up with your service'});
+
     Router.go('hotelsList');
   },
 
