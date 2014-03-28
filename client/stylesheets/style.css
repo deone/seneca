@@ -103,22 +103,17 @@ body	{
 }
 
 .footer {
-  margin-top: 100px;
   text-align: center;
   border-top: 1px solid #e5e5e5;
   padding-top: 40px;
   padding-bottom: 40px;
 }
 
-.app-body  {
-  min-height: 320px;
-}
-
 .hotels-list  {
   padding-top: 20px;
 }
 
-.s-alert  {
+.s-panel {
   border-radius: 0;
   margin-bottom: 0;
 }
