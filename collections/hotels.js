@@ -5,12 +5,12 @@ Hotels.allow({
   remove: ownsDocument
 });
 
-Hotels.deny({
+/* Hotels.deny({
   update: function(userId, hotel, fieldNames) {
     // may only edit the following two fields:
     return (_.without(fieldNames, 'type', 'name').length > 0);
   }
-});
+}); */
 
 Meteor.methods({
   post: function(hotelAttributes)  {

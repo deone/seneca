@@ -19,7 +19,7 @@ Template.editHotel.events({
     });
   }, */
 
-  'click .delete': function(e)  {
+  'click #delete': function(e)  {
     e.preventDefault();
 
     // Save reason
@@ -30,6 +30,9 @@ Template.editHotel.events({
     var currentHotelId = this._id;
     Hotels.remove(currentHotelId);
 
+    // After upgrading Meteor to 0.8.0, .fade stopped fading with modal
+    // Only works in the absence of Router.go(), hence the need to fadeOut() explicitly.
+    $('.fade').fadeOut();
     Router.go('hotelsList');
   },
 
