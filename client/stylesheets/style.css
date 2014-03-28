@@ -124,11 +124,15 @@ body	{
 }
 
 .s-modal-dialog {
-  margin-top: 80px;
+  margin-top: 90px;
 }
 
-.s-modal-body {
-  min-height: 360px;
+.s-jumbotron  {
+  margin-bottom: 0px;
+}
+
+.s-modal-footer {
+  margin-top: 0px;
 }
 
 .capitalize {
