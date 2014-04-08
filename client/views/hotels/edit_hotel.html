@@ -10,8 +10,8 @@
     <div class="col-md-2 edit-listing-nav">
       <h6 class="section-header">Basics</h6>
       <ul class="list-unstyled edit-listing-nav-list">
-        <li><a id="calendar" href="{{pathFor 'editHotel'}}/calendar">Calendar</a></li>
-        <li><a id="pricing" href="{{pathFor 'editHotel'}}/pricing">Pricing</a></li>
+        <li><a id="calendar" href="#">Calendar</a></li>
+        <li><a id="pricing" href="#">Pricing</a></li>
       </ul>
       <h6 class="section-header">Description</h6>
       <ul class="list-unstyled edit-listing-nav-list">
@@ -22,14 +22,12 @@
       <ul class="list-unstyled edit-listing-nav-list">
         <li><a href="#">Amenities</a></li>
         <li><a href="#">Address</a></li>
+        <li><a id="listing" href="#">Listing</a></li>
       </ul>
     </div>
 
-    <div class="col-md-7" id="edit-pane">
-      <div class="page-header">
-        <h1>Edit Listing</h1>
-      </div>
-      <p>If you wish, you can permanently <a href="#" id="show-delete-info" data-toggle="modal" data-target="#delete-info">delete your listing</a>.</p>
+    <div class="col-md-7">
+      {{> template}}
       {{> modals}}
     </div>
 

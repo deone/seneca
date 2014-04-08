@@ -36,7 +36,23 @@ Template.editHotel.events({
     Router.go('hotelsList');
   },
 
+  'click #calendar': function(e)  {
+    e.preventDefault();
+    Session.set('template', 'calendar');
+  },
+
+  'click #pricing': function(e)  {
+    e.preventDefault();
+    Session.set('template', 'pricing');
+  },
+
+  'click #listing': function(e)  {
+    e.preventDefault();
+    Session.set('template', 'listing');
+  },
+
   'click #show-delete-info': function(e)  {
+    e.preventDefault();
     var checkbox = document.getElementById('understand');
     var deleteButton = document.getElementById('delete');
 
@@ -58,5 +74,10 @@ Template.editHotel.rendered = function()  {
     };
     $('#welcome').modal(options);
   }
+
   Session.set('newHotel', false);
 };
+
+Template.editHotel.helpers({
+  template: function()  {return Template[Session.get('template')];}
+});
