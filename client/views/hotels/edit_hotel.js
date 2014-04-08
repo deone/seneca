@@ -39,16 +39,19 @@ Template.editHotel.events({
   'click #calendar': function(e)  {
     e.preventDefault();
     Session.set('template', 'calendar');
+    window.history.pushState(null, null, '/edit/' + this._id + '/calendar');
   },
 
   'click #pricing': function(e)  {
     e.preventDefault();
     Session.set('template', 'pricing');
+    window.history.pushState(null, null, '/edit/' + this._id + '/pricing');
   },
 
   'click #listing': function(e)  {
     e.preventDefault();
     Session.set('template', 'listing');
+    window.history.pushState(null, null, '/edit/' + this._id + '/listing');
   },
 
   'click #show-delete-info': function(e)  {
