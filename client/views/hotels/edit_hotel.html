@@ -14,12 +14,17 @@
         <h1>Edit Listing</h1>
       </div>
       <p>If you wish, you can permanently <a href="#" id="show-delete-info" data-toggle="modal" data-target="#delete-info">delete your listing</a>.</p>
+      {{> modals}}
     </div>
 
     <div class="col-md-2">
     </div>
   </div>
 
+  
+</template> 
+
+<template name="modals">
   <!-- Modals Start -->
   <div class="modal fade" id="delete-info" tabindex="-1" aria-labelledby="delete-infoLabel" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
@@ -67,4 +72,4 @@
     </div>
   </div>
   <!-- Modals end -->
-</template> 
+</template>
