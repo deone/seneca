@@ -138,3 +138,16 @@ body	{
   min-height: 400px;
   border-right: solid 1px #eee;
 }
+
+.edit-listing-nav {
+  border-right: solid 1px #eee;
+  padding: 25px;
+}
+
+.section-header {
+  text-transform: uppercase;
+}
+
+.edit-listing-nav-list  {
+  line-height: 2em;
+}

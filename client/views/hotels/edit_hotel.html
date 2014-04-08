@@ -1,19 +1,35 @@
 <template name="editHotel">
   <div class="panel panel-default row s-panel">
     <div class="panel-body">
-      <a href="{{pathFor 'hotelsList'}}">View your listings</a>
+      <a class="pull-left" href="{{pathFor 'hotelsList'}}">View your listings</a>
+      <a class="pull-right" href="{{pathFor 'viewHotel'}}">Preview</a>
     </div>
   </div>
 
   <div class="row">
-    <div class="col-md-2 leftmost-col">
+    <div class="col-md-2 edit-listing-nav">
+      <h6 class="section-header">Basics</h6>
+      <ul class="list-unstyled edit-listing-nav-list">
+        <li><a href="#">Calendar</a></li>
+        <li><a href="#">Pricing</a></li>
+      </ul>
+      <h6 class="section-header">Description</h6>
+      <ul class="list-unstyled edit-listing-nav-list">
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Photos</a></li>
+      </ul>
+      <h6 class="section-header">Settings</h6>
+      <ul class="list-unstyled edit-listing-nav-list">
+        <li><a href="#">Amenities</a></li>
+        <li><a href="#">Address</a></li>
+      </ul>
     </div>
 
     <div class="col-md-7">
-      <div class="page-header">
+      <!-- <div class="page-header">
         <h1>Edit Listing</h1>
       </div>
-      <p>If you wish, you can permanently <a href="#" id="show-delete-info" data-toggle="modal" data-target="#delete-info">delete your listing</a>.</p>
+      <p>If you wish, you can permanently <a href="#" id="show-delete-info" data-toggle="modal" data-target="#delete-info">delete your listing</a>.</p> -->
       {{> modals}}
     </div>
 
