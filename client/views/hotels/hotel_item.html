@@ -3,10 +3,13 @@
     <div class="hotel-content">
       <h3><a href="{{pathFor 'hotelPage'}}">{{name}}</a><span class="capitalize">{{type}}</span></h3>
       <p>
-        listed by {{manager}}
-        {{#if ownsHotel}}
-          <a href="{{pathFor 'editHotel'}}">Edit</a>
-        {{/if}}
+        {{city}}
+        <span>
+          {{#if ownsHotel}}
+            <a href="{{pathFor 'editHotel'}}">Manage Listing</a>
+          {{/if}}
+          <a href="{{pathFor 'viewHotel'}}">View Listing</a>
+        </span>
       </p>
     </div>
   </div>

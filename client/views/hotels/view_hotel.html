@@ -1,0 +1,20 @@
+<template name="viewHotel">
+  <div class="panel panel-default row s-panel">
+    <div class="panel-body">
+      <a href="{{pathFor 'hotelsList'}}">Edit your listing</a>
+    </div>
+  </div>
+
+  <div class="row">
+    <h1 style="background: #ff0">{{name}}</h1>
+    <div class="col-md-1">
+    </div> 
+    <div class="col-md-6">
+      {{> hotelItem}}
+    </div>
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div>
+</template>
