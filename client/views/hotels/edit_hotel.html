@@ -10,8 +10,8 @@
     <div class="col-md-2 edit-listing-nav">
       <h6 class="section-header">Basics</h6>
       <ul class="list-unstyled edit-listing-nav-list">
-        <li><a href="#">Calendar</a></li>
-        <li><a href="#">Pricing</a></li>
+        <li><a id="calendar" href="{{pathFor 'editHotel'}}/calendar">Calendar</a></li>
+        <li><a id="pricing" href="{{pathFor 'editHotel'}}/pricing">Pricing</a></li>
       </ul>
       <h6 class="section-header">Description</h6>
       <ul class="list-unstyled edit-listing-nav-list">
@@ -25,67 +25,15 @@
       </ul>
     </div>
 
-    <div class="col-md-7">
-      <!-- <div class="page-header">
+    <div class="col-md-7" id="edit-pane">
+      <div class="page-header">
         <h1>Edit Listing</h1>
       </div>
-      <p>If you wish, you can permanently <a href="#" id="show-delete-info" data-toggle="modal" data-target="#delete-info">delete your listing</a>.</p> -->
+      <p>If you wish, you can permanently <a href="#" id="show-delete-info" data-toggle="modal" data-target="#delete-info">delete your listing</a>.</p>
       {{> modals}}
     </div>
 
     <div class="col-md-2">
     </div>
   </div>
-
-  
-</template> 
-
-<template name="modals">
-  <!-- Modals Start -->
-  <div class="modal fade" id="delete-info" tabindex="-1" aria-labelledby="delete-infoLabel" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4 class="modal-title" id="delete-infoLabel">Delete Listing</h4>
-        </div>
-        <div class="modal-body">
-          <p>IMPORTANT! Deleting a listing is permanent and cannot be reversed. You may wish to hide your listing instead.</p>
-
-          <p>If you delete this listing:</p>
-          <ul>
-            <li>This listing will be deleted from the site forever. You will not be able to retrieve this listing.</li>
-            <li>Your other account details will remain unchanged. Your profile and any other listings will remain associated with your account.</li>
-            <li>All emails associated with the deleted listing will remain accessible.</li>
-            <li>All reviews will remain visible in profiles, but will not be associated with a listing.</li>
-          </ul>
-          <p>Tell us why you're deleting your listing (optional):</p>
-          <form>
-            <textarea id="reason" class="form-control" rows="3"></textarea>
-            <input type="checkbox" id="understand"> <span class="alert-danger">I understand that clicking the button below will completely delete my listing from the site and it cannot be recovered.</span>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button id="delete" type="button" data-dismiss="modal" class="btn btn-danger" disabled>Delete Hotel</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="welcome" tabindex="-1" role="dialog" aria-labelledby="welcomeLabel" aria-hidden="true">
-    <div class="modal-dialog s-modal-dialog">
-      <div class="modal-content">
-        <div class="modal-body">
-          <div class="jumbotron s-jumbotron">
-            <h1>We've created your listing!</h1>
-            <p>6 more steps to list your hotel.</p>
-          </div>
-        </div>
-        <div class="modal-footer s-modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Finish my listing</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Modals end -->
 </template>
