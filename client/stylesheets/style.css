@@ -151,3 +151,7 @@ body	{
 .edit-listing-nav-list  {
   line-height: 2em;
 }
+
+.edit-pane  {
+  padding-top: 15px;
+}
