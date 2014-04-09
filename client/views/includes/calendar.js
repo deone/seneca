@@ -1,13 +1,30 @@
 Template.calendar.events({
   'click input[name=availability]': function(e)  {
-    e.preventDefault();
 
     var currentHotelId = this._id;
-    var availability = {availability: $(e.target).val()};
+    var value = $(e.target).val();
 
-    Hotels.update(currentHotelId, {$set: availability}, function(error) {
-      if (error)
+    Hotels.update(currentHotelId, {$set: {availability: value}}, function(error) {
+      if (error)  {
         throwError(error.reason);
+      } else  {
+        if (value === 'always') {
+          Session.set('calendar', 'Always Available');
+        } else  {
+          Session.set('calendar', 'Sometimes Available');
+        }
+        $(".alert").fadeIn();
+      }
     });
   }
 });
+
+Template.calendar.helpers({
+  calendarInfo: function()  {
+    return Session.get('calendar');
+  }
+});
+
+Template.calendar.rendered = function()  {
+  $(".alert").hide();
+}
