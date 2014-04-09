@@ -82,5 +82,7 @@ Template.editHotel.rendered = function()  {
 };
 
 Template.editHotel.helpers({
-  template: function()  {return Template[Session.get('template')];}
+  template: function()  {
+    return Template[Session.get('template')];
+  }
 });
