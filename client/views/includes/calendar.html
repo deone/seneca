@@ -1,3 +1,15 @@
 <template name="calendar">
-  <p>Here's my calendar.</p>
+  <form class="form-horizontal" role="form">
+    <div class="form-group">
+      <label for="name" class="col-sm-2 control-label">When is your listing available?</label>
+      <div class="col-sm-10">
+        <label class="radio-inline">
+          <input id="always" type="radio" name="availability" value="always">Always
+        </label>
+        <label class="radio-inline">
+          <input id="sometimes" type="radio" name="availability" value="sometimes">Sometimes
+        </label>
+      </div>
+    </div>
+  </form>
 </template>
