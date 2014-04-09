@@ -1,9 +1,12 @@
 <template name="roomTypes">
-  <div>
-    {{#each this.rooms}}
-      <li><a href="#">{{type}}</a></li>
-    {{/each}}
-  </div>
+  {{#if this.rooms}}
+    <h5>Room Types</h5>
+    <div class="list-group">
+      {{#each this.rooms}}
+        <a href="#" class="list-group-item">{{type}}</a>
+      {{/each}}
+    </div>
+  {{/if}}
 
   <form class="form-horizontal" role="form">
     <div class="form-group">
