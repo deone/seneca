@@ -1,6 +1,8 @@
 Template.calendar.events({
   'click input[name=availability]': function(e)  {
 
+    $(".alert").fadeIn();
+
     var currentHotelId = this._id;
     var value = $(e.target).val();
 
@@ -9,22 +11,16 @@ Template.calendar.events({
         throwError(error.reason);
       } else  {
         if (value === 'always') {
-          Session.set('calendar', 'Always Available');
+          html = "<strong>Always Available</strong>. This is your calendar! After listing your hotel, return here to update your availability."
         } else  {
-          Session.set('calendar', 'Sometimes Available');
+          html = "<strong>Sometimes Available</strong>. This is your calendar! After listing your hotel, return here to update your availability."
         }
-        $(".alert").fadeIn();
+        $(".alert").html(html);
       }
     });
   }
 });
 
-Template.calendar.helpers({
-  calendarInfo: function()  {
-    return Session.get('calendar');
-  }
-});
-
-Template.calendar.rendered = function()  {
+Template.calendar.rendered = function() {
   $(".alert").hide();
 }
