@@ -36,22 +36,10 @@ Template.editHotel.events({
     Router.go('hotelsList');
   },
 
-  'click #calendar': function(e)  {
+  'click .nav-item': function(e)  {
     e.preventDefault();
-    Session.set('template', 'calendar');
-    window.history.pushState(null, null, '/edit/' + this._id + '/calendar');
-  },
-
-  'click #pricing': function(e)  {
-    e.preventDefault();
-    Session.set('template', 'pricing');
-    window.history.pushState(null, null, '/edit/' + this._id + '/pricing');
-  },
-
-  'click #listing': function(e)  {
-    e.preventDefault();
-    Session.set('template', 'listing');
-    window.history.pushState(null, null, '/edit/' + this._id + '/listing');
+    Session.set('template', e.target.id);
+    window.history.pushState(null, null, '/edit/' + this._id + '/' + e.target.id);
   },
 
   'click #show-delete-info': function(e)  {
