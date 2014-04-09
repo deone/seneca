@@ -1,8 +1,9 @@
 <template name="calendar">
-  <form class="form-horizontal" role="form">
+  <form role="form">
     <div class="form-group">
-      <label for="name" class="col-sm-2 control-label">When is your listing available?</label>
-      <div class="col-sm-10">
+      <label for="availability">When is your listing available?</label>
+
+      <div>
         <label class="radio-inline">
           <input id="always" type="radio" name="availability" value="always">Always
         </label>
@@ -10,8 +11,10 @@
           <input id="sometimes" type="radio" name="availability" value="sometimes">Sometimes
         </label>
       </div>
+
     </div>
   </form>
+
   <div class="alert alert-success">
     <strong>{{calendarInfo}}</strong>. This is your calendar! After listing your hotel, return here to update your availability.
   </div>
