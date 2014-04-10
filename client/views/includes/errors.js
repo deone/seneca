@@ -7,4 +7,5 @@ Template.errors.helpers({
 Template.error.rendered = function()  {
   var error = this.data;
   Errors.update(error._id, {$set: {seen: true}});
+  // console.log(Object.keys(this));
 };
