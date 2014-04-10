@@ -154,3 +154,9 @@ body	{
    padding-bottom: 8px;
    margin-bottom: 20px;
 }
+
+.s-panel  {
+  border-radius: 0;
+  margin-bottom: 0;
+}
+  
