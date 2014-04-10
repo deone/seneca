@@ -39,7 +39,7 @@ Template.roomTypes.events({
       }
     }
 
-    $(".alert").html("<strong>Saved!</strong>");
+    $(".alert").html("<strong>Saved!</strong>").fadeOut(2000);
   }
 });
 
