@@ -1,21 +1,23 @@
 <template name="calendar">
-  <form role="form">
-    <div class="form-group">
-      <label for="availability">When is your listing available?</label>
-
-      <div>
-        <label class="radio-inline">
-          <input id="always" type="radio" name="availability" value="always">Always
-        </label>
-        <label class="radio-inline">
-          <input id="sometimes" type="radio" name="availability" value="sometimes">Sometimes
-        </label>
+  <div class="col-md-3 edit-pane">
+    <h4>When is your listing available?</h4>
+    <form role="form">
+      <div class="form-group">
+        <div>
+          <label class="radio-inline">
+            <input id="always" type="radio" name="availability" value="always">Always
+          </label>
+          <label class="radio-inline">
+            <input id="sometimes" type="radio" name="availability" value="sometimes">Sometimes
+          </label>
+        </div>
       </div>
+    </form>
 
+    <div class="alert alert-success">
+      <strong>Saving...</strong>
     </div>
-  </form>
-
-  <div class="alert alert-success">
-    <strong>Saving...</strong>
+  </div>
+  <div class="col-md-7 edit-pane">
   </div>
 </template>
