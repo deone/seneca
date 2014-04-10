@@ -3,12 +3,11 @@
     <div class="col-md-3">
     </div>
 
-    <div class="col-md-7">
-      <div class="page-header">
-        <h1>List Your Hotel</h1>
-      </div>
+    <div class="col-md-7 edit-pane">
+      <h2 class="edit-pane-header">List Your Hotel</h2>
 
       <form class="form-horizontal" role="form">
+        {{> errors}}
         <div class="form-group">
           <label for="name" class="col-sm-2 control-label">Hotel Type</label>
           <div class="col-sm-10">
