@@ -1,6 +1,6 @@
 <template name="roomTypes">
   <div class="col-md-6 edit-pane">
-    <h4>Add Room Type</h4>
+    <h4 class="edit-pane-header">Add Room Type</h4>
     <form class="form-horizontal" role="form">
       <div class="form-group">
         <label for="type" class="col-sm-2 control-label">Room Type</label>
@@ -28,8 +28,8 @@
   </div>
 
   <div class="col-md-4 edit-pane" style="border-left: solid 1px #eee">
-    <h5>Room Types</h5>
     {{#if this.rooms}}
+      <h5>Room Types</h5>
       <div class="list-group">
         {{#each this.rooms}}
           <a href="#" class="list-group-item">{{type}}</a>
