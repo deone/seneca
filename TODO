@@ -5,3 +5,6 @@
 - We need to find a way to update nested arrays in place instead of unsetting and pushing.
 - "rooms": {"Deluxe": {"summary": "1 Bed with pool view", "price": "10"}, "Standard": {"summary": "2 Beds with pool view", "price": "30"}}
 - Now that we've stored rooms in the Hotel collection, we need to make them into their collection. That was a good lesson in saving nested objects.
+- Airbnb grants not-logged-in users to the 'List Your Space' page and asks them to log in when they fill the form and click Continue. We should do this too.
+- Add Delete button for room on the list, not on the form.
+- We can clear form after successful submission by doing a $el.val('')
