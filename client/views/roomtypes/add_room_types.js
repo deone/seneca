@@ -1,4 +1,4 @@
-Template.roomTypes.events({
+Template.addRoomTypes.events({
   'blur form': function(e) {
 
     var currentHotelId = this._id;
@@ -25,6 +25,6 @@ Template.roomTypes.events({
 
 });
 
-Template.roomTypes.rendered = function() {
-  $(".alert").hide();
+Template.addRoomTypes.rendered = function() {
+  $(".alert-success").hide();
 }
