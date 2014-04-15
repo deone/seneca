@@ -36,9 +36,10 @@ Meteor.methods({
     } */
 
     // pick out the whitelisted keys
-    var hotel = _.extend(_.pick(hotelAttributes, 'type', 'name', 'city'), {
+    // var hotel = _.extend(_.pick(hotelAttributes, 'type', 'name', 'city'), {
+    var hotel = _.extend(hotelAttributes, {
       userId: user._id,
-      manager: user.emails[0].address,
+      // manager: user.emails[0].address,
       listed: new Date().getTime()
     });
 
