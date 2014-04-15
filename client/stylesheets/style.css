@@ -159,3 +159,7 @@ body	{
   border-radius: 0;
   margin-bottom: 0;
 }
+
+.rightmost-col  {
+  border-left: solid 1px #eee;
+}
