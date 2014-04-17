@@ -1,31 +1,8 @@
 <template name="editHotel">
-  <div class="panel panel-default row s-panel">
-    <div class="panel-body">
-      <a class="pull-left" href="{{pathFor 'hotelsList'}}">View your listings</a>
-      <a class="pull-right" href="{{pathFor 'viewHotel'}}">Preview</a>
-    </div>
-  </div>
+  {{> editHotelPanel}}
 
   <div class="row">
-    <nav class="col-md-2 edit-listing-nav">
-      <h6 class="section-header">Basics</h6>
-      <ul class="list-unstyled edit-listing-nav-list">
-        <li><a class="nav-item" id="calendar" href="#">Calendar</a></li>
-        <li><a class="nav-item" id="roomTypes" href="#">Room Types</a></li>
-        <li><a class="nav-item" id="pricing" href="#">Pricing</a></li>
-      </ul>
-      <h6 class="section-header">Description</h6>
-      <ul class="list-unstyled edit-listing-nav-list">
-        <li><a class="nav-item" href="#">Overview</a></li>
-        <li><a class="nav-item" href="#">Photos</a></li>
-      </ul>
-      <h6 class="section-header">Settings</h6>
-      <ul class="list-unstyled edit-listing-nav-list">
-        <li><a class="nav-item" href="#">Amenities</a></li>
-        <li><a class="nav-item" href="#">Address</a></li>
-        <li><a class="nav-item" id="listing" href="#">Listing</a></li>
-      </ul>
-    </nav>
+    {{> editHotelNav}}
     {{> template}}
   </div>
   {{> modals}}
