@@ -3,7 +3,7 @@
     <h4 class="edit-pane-header">Add Room Type</h4>
     {{> errors}}
     <form class="form-horizontal" role="form">
-      <div class="form-group">
+      <div class="form-group has-feedback">
         <label for="type" class="col-sm-3 control-label">Room Type</label>
         <div class="col-sm-8">
           <input type="text" class="form-control" name="type" placeholder="E.g. Studio, Standard, Deluxe">
@@ -19,9 +19,8 @@
 
       <div class="form-group">
         <label for="price" class="col-sm-3 control-label">Price</label>
-        <div class="col-sm-8 input-group">
-          <span class="input-group-addon">$</span>
-          <input name="price" type="number" class="form-control" style="width: 380px;">
+        <div class="col-sm-8">
+          <input name="price" type="number" class="form-control" placeholder="In USD">
         </div>
       </div>
     </form>
