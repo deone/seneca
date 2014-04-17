@@ -3,7 +3,7 @@
     <h5>Room Types</h5>
     <div class="list-group">
       {{#each roomtypes}}
-        <a href="#" class="list-group-item">{{type}}</a>
+        {{> roomType}}
       {{else}}
         <p>You've not added any room types.</p>
       {{/each}}
@@ -12,4 +12,8 @@
       <strong>Saving...</strong>
     </div>
   </div>
+</template>
+
+<template name="roomType">
+  <a href="#" class="list-group-item">{{type}}</a>
 </template>

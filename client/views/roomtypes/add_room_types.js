@@ -38,9 +38,6 @@ Template.addRoomTypes.events({
       if (error)  {
         throwError(error.reason);
       } else  {
-        /* typeEl.val('');
-        summaryEl.val('');
-        priceEl.val(''); */
         $(".alert-success").html("<strong>Saved!</strong>").fadeOut(3000);
       }
 
