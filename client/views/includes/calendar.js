@@ -23,4 +23,5 @@ Template.calendar.events({
 
 Template.calendar.rendered = function() {
   $(".alert-success").hide();
+  $("input[name=availability][value=" + this.data.availability + "]").attr('checked', true);
 }
