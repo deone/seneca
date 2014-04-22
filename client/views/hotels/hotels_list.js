@@ -1,5 +1,5 @@
 Template.hotelsList.helpers({
   hotels: function()  {
-    return Hotels.find({manager: Meteor.user().emails[0].address}, {sort: {listed: -1}});
+    return Hotels.find({userId: Meteor.user()._id}, {sort: {listed: -1}});
   }
 });

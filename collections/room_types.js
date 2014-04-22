@@ -14,7 +14,7 @@ Meteor.methods({
     if (!user)
       throw new Meteor.Error(401, "You need to login to add room types");
 
-    var roomType = RoomTypes.findOne({type: roomTypeAttributes.type});
+    var roomType = RoomTypes.findOne({type: roomTypeAttributes.type, hotelId: roomTypeAttributes.hotelId});
 
     if (!roomType)  {
       roomType = _.extend(roomTypeAttributes, {
