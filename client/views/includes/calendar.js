@@ -1,7 +1,7 @@
 Template.calendar.events({
   'click input[name=availability]': function(e)  {
 
-    $(".alert").fadeIn();
+    $(".alert-success").fadeIn();
 
     var currentHotelId = this._id;
     var value = $(e.target).val();
@@ -15,12 +15,12 @@ Template.calendar.events({
         } else  {
           html = "<strong>Sometimes Available</strong>. This is your calendar! After listing your hotel, return here to update your availability."
         }
-        $(".alert").html(html);
+        $(".alert-success").html(html);
       }
     });
   }
 });
 
 Template.calendar.rendered = function() {
-  $(".alert").hide();
+  $(".alert-success").hide();
 }
