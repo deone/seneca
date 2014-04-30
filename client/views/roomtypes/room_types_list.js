@@ -14,3 +14,7 @@ Template.roomType.events({
     form.find('input[name=price]').val(t.data.price);
   },
 });
+
+Template.roomTypesList.rendered = function() {
+  $(".alert-success").hide();
+}
