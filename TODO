@@ -8,3 +8,4 @@
 - Airbnb grants not-logged-in users to the 'List Your Space' page and asks them to log in when they fill the form and click Continue. We should do this too.
 - Add Delete button for room on the list, not on the form.
 - We can clear form after successful submission by doing a $el.val('')
+- Move saving feedback to add_room_type template.
