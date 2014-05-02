@@ -36,12 +36,6 @@ Template.editHotel.events({
     Router.go('hotelsList');
   },
 
-  'click .nav-item': function(e)  {
-    e.preventDefault();
-    Session.set('template', e.target.id);
-    window.history.pushState(null, null, '/edit/' + this._id + '/' + e.target.id);
-  },
-
   'click #show-delete-info': function(e)  {
     e.preventDefault();
     var checkbox = document.getElementById('understand');
