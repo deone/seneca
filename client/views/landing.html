@@ -1,3 +1,35 @@
 <template name="landing">
- 
+  <div id="top" class="header">
+    <div class="vert-text">
+      <h1>Find a place to stay.</h1>
+      <h3>Book hotels in over 35,000 cities and 200 countries.</h3>
+      <div class="search">
+        <form class="form-inline" role="form">
+          <div class="form-group">
+            <label class="sr-only" for="">Where are you going?</label>
+            <input type="text" class="form-control" id="" placeholder="Where are you going?">
+          </div>
+          <div class="form-group">
+            <label class="sr-only" for="">Check-In Date</label>
+            <input type="date" class="form-control" id="" placeholder="Check-in">
+          </div>
+          <div class="form-group">
+            <label class="sr-only" for="">Check-Out Date</label>
+            <input type="date" class="form-control" id="">
+          </div>
+          <div class="form-group">
+            <label class="sr-only" for="">Number of Guests</label>
+            <select class="form-control">
+              <option>1 Guest</option>
+              <option>2 Guests</option>
+              <option>3 Guests</option>
+              <option>4 Guests</option>
+              <option>5 Guests</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+      </div>
+    </div>
+  </div> 
 </template>
