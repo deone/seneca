@@ -3,22 +3,23 @@
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#landing-nav">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="{{pathFor 'landing'}}">Seneca</a>
+        <a class="navbar-brand" href="{{pathFor 'landing'}}">Herebly</a>
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> 
+      <div class="collapse navbar-collapse" id="landing-nav"> 
         <form class="navbar-form navbar-left" role="search">
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search">
+            <input type="text" class="form-control" placeholder="Where are you going?">
           </div>
-          <button type="submit" class="btn btn-default">Submit</button>
+          <button type="submit" class="btn btn-primary">Search</button>
         </form>
+        
         <ul class="nav navbar-nav">
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Browse <b class="caret"></b></a>
@@ -33,8 +34,137 @@
             </ul>
           </li>
         </ul>
-        <ul class="nav navbar-nav navbar-right">
+
+        <!-- <ul class="nav navbar-nav navbar-top-links navbar-right"> -->
+        <ul class="nav navbar-top-links navbar-right">
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              <i class="fa fa-envelope fa-fw"></i>  <i class="fa fa-caret-down"></i>
+            </a>
+            
+            <ul class="dropdown-menu dropdown-messages">
+              <li>
+                <a href="#">
+                  <div>
+                    <strong>John Smith</strong>
+                    <span class="pull-right text-muted">
+                      <em>Yesterday</em>
+                    </span>
+                  </div>
+                  <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                </a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="#">
+                  <div>
+                    <strong>John Smith</strong>
+                    <span class="pull-right text-muted">
+                      <em>Yesterday</em>
+                    </span>
+                  </div>
+                  <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                </a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="#">
+                  <div>
+                    <strong>John Smith</strong>
+                    <span class="pull-right text-muted">
+                      <em>Yesterday</em>
+                    </span>
+                  </div>
+                  <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                </a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a class="text-center" href="#">
+                  <strong>Read All Messages</strong>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+              </li>
+            </ul>
+            <!-- /.dropdown-messages -->
+          </li>
+
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              <i class="fa fa-bell fa-fw"></i>  <i class="fa fa-caret-down"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-alerts">
+              <li>
+                <a href="#">
+                  <div>
+                    <i class="fa fa-comment fa-fw"></i> New Comment
+                    <span class="pull-right text-muted small">4 minutes ago</span>
+                  </div>
+                </a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="#">
+                  <div>
+                    <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                    <span class="pull-right text-muted small">12 minutes ago</span>
+                  </div>
+                </a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="#">
+                  <div>
+                    <i class="fa fa-envelope fa-fw"></i> Message Sent
+                    <span class="pull-right text-muted small">4 minutes ago</span>
+                  </div>
+                </a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="#">
+                  <div>
+                    <i class="fa fa-tasks fa-fw"></i> New Task
+                    <span class="pull-right text-muted small">4 minutes ago</span>
+                  </div>
+                </a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="#">
+                  <div>
+                    <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                    <span class="pull-right text-muted small">4 minutes ago</span>
+                  </div>
+                </a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a class="text-center" href="#">
+                  <strong>See All Alerts</strong>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+              </li>
+            </ul>
+            <!-- /.dropdown-alerts -->
+          </li>
+          <!-- /.dropdown -->
+
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-user">
+              <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a></li>
+              <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a></li>
+              <li class="divider"></li>
+              <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a></li>
+            </ul>
+            <!-- /.dropdown-user -->
+          </li>
+
           {{>_loginButtons}}
+
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Help <b class="caret"></b></a>
             <ul class="dropdown-menu">
@@ -47,6 +177,7 @@
               <li><a href="#">One more separated link</a></li>
             </ul>
           </li>
+
           <li><a href="{{pathFor 'newHotel'}}">List Your Hotel</a></li>
         </ul>
       </div><!-- /.navbar-collapse -->
