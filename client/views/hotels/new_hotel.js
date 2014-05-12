@@ -25,6 +25,6 @@ Template.newHotel.rendered = function() {
   var options = {
     types: ['(cities)']
   };
-  var input = (document.getElementById('city'));
+  var input = document.getElementById('city');
   new google.maps.places.Autocomplete(input, options);
 };
