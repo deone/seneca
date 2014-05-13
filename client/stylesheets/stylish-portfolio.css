@@ -105,16 +105,10 @@ body {
 
 /* Full Page Image Header Area */
 
-.header {
+.app-main {
   display: table;
-  height: 100%;
   width: 100%;
   position: relative;
-  background: url(../img/bg.jpg) no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
 
 /* Intro */
