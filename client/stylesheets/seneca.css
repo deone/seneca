@@ -27,16 +27,10 @@
   color: #000;
 }
 
-.landing  {
-  height: 100%;
-  background: url(../img/bg.jpg) no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+.new-hotel  {
+  padding: 5% 25%;
 }
 
-.new-hotel  {
+.app-main {
   background-color: #f8f8f8;
-  padding: 5% 25%;
 }

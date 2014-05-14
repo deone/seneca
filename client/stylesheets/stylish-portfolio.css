@@ -105,11 +105,16 @@ body {
 
 /* Full Page Image Header Area */
 
-.app-main {
+.landing  {
   display: table;
   width: 100%;
   position: relative;
-  background: #f8f8f8;
+  height: 100%;
+  background: url(../img/bg.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 /* Intro */
