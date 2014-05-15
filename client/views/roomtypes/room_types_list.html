@@ -1,19 +1,25 @@
 <template name="roomTypesList">
-  <div class="col-md-4 edit-pane rightmost-col">
-    <h5>Room Types</h5>
-    <div class="list-group">
-      {{#each roomtypes}}
-        {{> roomType}}
-      {{else}}
-        <p>You've not added any room types.</p>
-      {{/each}}
-    </div>
-    <div class="alert alert-success">
-      <strong>Saving...</strong>
+  <div class="col-lg-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <i class="fa fa-th-list fa-fw"></i> Room Types
+      </div>
+      <div class="panel-body">
+          <div class="list-group">
+            {{#each roomtypes}}
+              {{> roomType}}
+            {{else}}
+              <p>You've not added any room types.</p>
+            {{/each}}
+          </div>
+      </div>
     </div>
   </div>
 </template>
 
 <template name="roomType">
-  <a href="#" class="list-group-item">{{type}}</a>
+  <a href="#" class="list-group-item">
+    <i class="fa fa-tablet fa-fw"></i> {{type}}
+    <span class="pull-right text-muted small"><em>${{price}}</em></span>
+  </a>
 </template>
