@@ -9,3 +9,4 @@
 - Add Delete button for room on the list, not on the form.
 - We can clear form after successful submission by doing a $el.val('')
 - Move saving feedback to add_room_type template.
+- Attempt showing and hiding the various forms in editHotel instead of using Session.
