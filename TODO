@@ -6,4 +6,3 @@
 - Add Delete button for room on the list, not on the form.
 - Move saving feedback to add_room_type template.
 - Attempt showing and hiding the various forms in editHotel instead of using Session.
-- Hotels list page freezes or redirect after deleting a hotel.

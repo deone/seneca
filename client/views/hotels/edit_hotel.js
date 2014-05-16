@@ -32,8 +32,11 @@ Template.editHotel.events({
 
     // After upgrading Meteor to 0.8.0, .fade stopped fading with modal
     // Only works in the absence of Router.go(), hence the need to fadeOut() explicitly.
+    // Even with explicit fadeOut(), the next page and everyone clicked to from it
+    // are frozen as if the modal is still active.
     $('.fade').fadeOut();
-    Router.go('hotelsList');
+
+    Router.go('hotelsList'); // This should route to user's listings page. Hotelslist should list all hotels, not user hotels.
   },
 
   'click #show-delete-info': function(e)  {

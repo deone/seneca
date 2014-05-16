@@ -14,6 +14,13 @@ Template.roomType.events({
     form.find('input[name=price]').val(t.data.price);
   },
 
+  /*
+   * Important note:
+   * The t that's passed into the event function is an object. It has functions
+   * (find, findAll) to reach elements and a data object (data from db).
+   * On the other hand, e.target is the HTML element on which the event was fired.
+   */
+
   'mouseover .list-group-item': function(e, t)  {
     elem = t.find('i');
     $(elem).removeClass('fa-tablet').addClass('fa-minus-circle').css('color', 'red');
