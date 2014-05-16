@@ -32,8 +32,11 @@ Template.roomType.events({
   },
 
   'click .fa-minus-circle': function(e, t)  {
-    RoomTypes.remove(t.data._id);
-  }
+    bootbox.confirm("Delete this room type?", function(result) {
+      if (result)
+        RoomTypes.remove(t.data._id);
+    });
+  },
 
 });
 
