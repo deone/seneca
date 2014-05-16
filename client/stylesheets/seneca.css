@@ -31,3 +31,8 @@
   padding-left: 15px;
   padding-right: 15px;
 }
+
+.edit-panel {
+  background-color: #ff0;
+  min-height: 490px;
+}
