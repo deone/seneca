@@ -21,6 +21,6 @@
 <template name="roomType">
   <a href="#" class="list-group-item">
     <i class="fa fa-fw fa-lg fa-tablet"></i> {{type}}
-    <span class="pull-right text-muted small"><em>${{price}}</em></span>
+    <span class="pull-right text-muted small"><em>{{#if price}}${{/if}}{{price}}</em></span>
   </a>
 </template>
