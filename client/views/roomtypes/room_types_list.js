@@ -7,7 +7,7 @@ Template.roomTypesList.helpers({
 Template.roomType.events({
   'click .list-group-item': function(e, t)  {
     e.preventDefault();
-    form = $('.form-horizontal');
+    form = $('#add-room-type');
 
     form.find('input[name=type]').val(t.data.type);
     form.find('textarea[name=summary]').val(t.data.summary);
