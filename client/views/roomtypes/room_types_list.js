@@ -13,6 +13,21 @@ Template.roomType.events({
     form.find('textarea[name=summary]').val(t.data.summary);
     form.find('input[name=price]').val(t.data.price);
   },
+
+  'mouseover .list-group-item': function(e, t)  {
+    elem = t.find('i');
+    $(elem).removeClass('fa-tablet').addClass('fa-minus-circle').css('color', 'red');
+  },
+
+  'mouseout .list-group-item': function(e, t)  {
+    elem = t.find('i');
+    $(elem).removeClass('fa-minus-circle').addClass('fa-tablet').css('color', 'inherit');
+  },
+
+  'click .fa-minus-circle': function(e, t)  {
+    RoomTypes.remove(t.data._id);
+  }
+
 });
 
 Template.roomTypesList.rendered = function() {
