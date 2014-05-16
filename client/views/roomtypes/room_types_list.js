@@ -39,7 +39,3 @@ Template.roomType.events({
   },
 
 });
-
-Template.roomTypesList.rendered = function() {
-  $(".alert-success").hide();
-}
