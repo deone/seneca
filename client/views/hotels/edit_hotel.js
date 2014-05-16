@@ -48,6 +48,20 @@ Template.editHotel.events({
         deleteButton.disabled = true;
       }
     }
+  },
+
+  'click a[href*=#]:not([href=#])': function(e) {
+    e.preventDefault();
+    if (location.pathname.replace(/^\//, '') == e.target.pathname.replace(/^\//, '') || location.hostname == e.target.hostname) {
+      var target = $(e.target.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top - 30
+        }, 1000);
+        return false;
+      }
+    }
   }
 
 });
