@@ -1,31 +1,23 @@
 <template name="editHotel">
   {{> nav}}
   <div id="page-wrapper">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="panel panel-default" style="margin-top: 20px">
-          <div class="panel-heading">
-            <div class="pull-left">
-              <div class="btn-group">
-                <button type="button" class="btn btn-info btn-xs">
-                  <i class="fa fa-th-list fa-fw"></i> View your listings
-                </button>
-              </div>
-            </div>
-            <div class="pull-right">
-              <div class="btn-group">
-                <button type="button" class="btn btn-success btn-xs">
-                  <i class="fa fa-eye fa-fw"></i> Preview
-                </button>
-              </div>
-            </div>
-            <div style="clear: both"></div>
-          </div>
-        </div>
-      </div>
-    </div>
     {{> roomTypes}}
     {{> overview}}
+    {{> photos}}
+    {{> amenities}}
+    {{> address}}
+    {{> listing}}
+
+    <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container-fluid">
+        <button type="button" class="btn btn-info navbar-btn btn-xs">
+          <i class="fa fa-th-list fa-fw"></i> View your listings
+        </button>
+        <button type="button" class="btn btn-success navbar-btn btn-xs pull-right">
+          <i class="fa fa-eye fa-fw"></i> Preview
+        </button>
+      </div>
+    </nav>
   </div>
   {{> modals}}
 </template>
