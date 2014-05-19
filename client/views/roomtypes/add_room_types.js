@@ -45,7 +45,3 @@ Template.addRoomTypes.events({
   }
 
 });
-
-Template.addRoomTypes.rendered = function() {
-  $('.alert-success').hide();
-}
