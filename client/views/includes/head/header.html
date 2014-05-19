@@ -1,26 +1,39 @@
 <template name="header">
-  <nav class="navbar navbar-default" role="navigation">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#seneca-navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="{{pathFor 'landing'}}">Herebly</a>
-      </div>
-      {{#if location}}
-        <div>
-          {{> headContents}}          
-        </div>
-      {{else}}
-        <div class="collapse navbar-collapse" id="seneca-navbar-collapse">
-          {{> headContents}}          
-        </div>
-      {{/if}}
+  {{#if location}}
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      {{> toggleHeadContents}}
+    </nav>
+  {{else}}
+    <nav class="navbar navbar-default" role="navigation">
+      {{> toggleHeadContents}}
+    </nav>
+  {{/if}}
+</template>
+
+<template name="toggleHeadContents">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#seneca-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{{pathFor 'landing'}}">Herebly</a>
     </div>
-  </nav>
+    {{#if location}}
+      <div>
+        {{> headContents}}
+      </div>
+    {{else}}
+      <div class="collapse navbar-collapse" id="seneca-navbar-collapse">
+        {{> headContents}}          
+      </div>
+    {{/if}}
+  </div>
+  {{#if location}}
+    {{> sidebar}}
+  {{/if}}
 </template>
 
 <template name="headContents">
