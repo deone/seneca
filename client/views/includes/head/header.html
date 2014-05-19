@@ -10,20 +10,30 @@
         </button>
         <a class="navbar-brand" href="{{pathFor 'landing'}}">Herebly</a>
       </div>
-      <div class="collapse navbar-collapse" id="seneca-navbar-collapse">
-        <form class="navbar-form navbar-left" role="search">
-          <div class="form-group">
-            <input type="text" id="where-header" class="form-control" placeholder="Where are you going?">
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-        <ul class="nav navbar-nav navbar-right">
-          {{>_loginButtons}}
-          {{# unless location}}
-            <li><a href="{{pathFor 'newHotel'}}">List Your Hotel</a></li>
-          {{/unless}}
-        </ul>
-      </div>
+      {{#if location}}
+        <div>
+          {{> headContents}}          
+        </div>
+      {{else}}
+        <div class="collapse navbar-collapse" id="seneca-navbar-collapse">
+          {{> headContents}}          
+        </div>
+      {{/if}}
     </div>
   </nav>
+</template>
+
+<template name="headContents">
+  <form class="navbar-form navbar-left" role="search">
+    <div class="form-group">
+      <input type="text" id="where-header" class="form-control" placeholder="Where are you going?">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  <ul class="nav navbar-nav navbar-right">
+    {{>_loginButtons}}
+    {{# unless location}}
+      <li><a href="{{pathFor 'newHotel'}}">List Your Hotel</a></li>
+    {{/unless}}
+  </ul>
 </template>
