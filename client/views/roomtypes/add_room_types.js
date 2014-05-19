@@ -33,12 +33,12 @@ Template.addRoomTypes.events({
       return;
     }
 
-    $(".alert-success").fadeIn();
+    $("#add-room-type .alert-success").fadeIn();
     Meteor.call('addRoomType', roomType, function(error, result)  {
       if (error)  {
         throwError(error.reason);
       } else  {
-        $(".alert-success").text("Saved.").fadeOut(3000);
+        $("#add-room-type .alert-success").text("Saved.").fadeOut(3000);
       }
 
     });

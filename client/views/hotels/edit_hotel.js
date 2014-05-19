@@ -57,6 +57,6 @@ Template.editHotel.rendered = function()  {
 
   Session.set('newHotel', false);
 
-  // $('.alert-success').hide();
+  $('.alert-success').hide();
 
 };
