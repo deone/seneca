@@ -1,13 +1,15 @@
 <template name="editHotel">
-  {{> header location="in"}}
+  {{> sidebar}}
   <div id="page-wrapper">
-    {{> roomTypes}}
-    {{> overview}}
-    {{> photos}}
-    {{> amenities}}
-    {{> address}}
-    {{> listing}}
-
+    {{> header location="in"}}
+    <div style="padding: 0 30px">
+      {{> roomTypes}}
+      {{> overview}}
+      {{> photos}}
+      {{> amenities}}
+      {{> address}}
+      {{> listing}}
+    </div>
     <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
       <div class="container-fluid">
         <button type="button" class="btn btn-info navbar-btn btn-xs">

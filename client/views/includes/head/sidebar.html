@@ -1,38 +1,40 @@
 <template name="sidebar">
-  <div id="seneca-navbar-collapse" class="navbar-default navbar-static-side collapse navbar-collapse" role="navigation">
-    <ul class="nav" id="side-menu">
-      <li>
-        <a href="#roomtypes"><i class="fa fa-building-o"></i>&nbsp;&nbsp;Room Types
-          {{> segmentDone}}
-        </a>
-      </li>
-      <li>
-        <a href="#overview"><i class="fa fa-quote-left"></i>&nbsp;&nbsp;Overview
-          {{> segmentPending}}
-        </a>
-      </li>
-      <li>
-        <a href="#photos"><i class="fa fa-picture-o"></i>&nbsp;&nbsp;Photos
-          {{> segmentPending}}
-        </a>
-      </li>
-      <li>
-        <a href="#amenities"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;&nbsp;Amenities
-          {{> segmentPending}}
-        </a>
-      </li>
-      <li>
-        <a href="#address"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;&nbsp;&nbsp;Address
-          {{> segmentPending}}
-        </a>
-      </li>
-      <li>
-        <a href="#listing"><i class="fa fa-list"></i>&nbsp;&nbsp;&nbsp;Listing
-          {{> segmentPending}}
-        </a>
-      </li>
-    </ul>
-    <!-- /#side-menu -->
+  <div class="navbar-fixed-top">
+    <div class="navbar-default navbar-static-side collapse navbar-collapse" role="navigation">
+      <ul class="nav" id="side-menu">
+        <li>
+          <a href="#roomtypes"><i class="fa fa-building-o"></i>&nbsp;&nbsp;Room Types
+            {{> segmentDone}}
+          </a>
+        </li>
+        <li>
+          <a href="#overview"><i class="fa fa-quote-left"></i>&nbsp;&nbsp;Overview
+            {{> segmentPending}}
+          </a>
+        </li>
+        <li>
+          <a href="#photos"><i class="fa fa-picture-o"></i>&nbsp;&nbsp;Photos
+            {{> segmentPending}}
+          </a>
+        </li>
+        <li>
+          <a href="#amenities"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;&nbsp;Amenities
+            {{> segmentPending}}
+          </a>
+        </li>
+        <li>
+          <a href="#address"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;&nbsp;&nbsp;Address
+            {{> segmentPending}}
+          </a>
+        </li>
+        <li>
+          <a href="#listing"><i class="fa fa-list"></i>&nbsp;&nbsp;&nbsp;Listing
+            {{> segmentPending}}
+          </a>
+        </li>
+      </ul>
+      <!-- /#side-menu -->
+    </div>
+    <!-- /.navbar-static-side -->
   </div>
-  <!-- /.navbar-static-side -->
 </template>
