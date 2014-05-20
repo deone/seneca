@@ -12,36 +12,57 @@ showErrorFeedback = function(elem)  {
 
 Template.addRoomTypes.events({
   'change input[name=type]': showSuccessFeedback,
+  'click .btn-danger': function(e, t)  {
+    e.preventDefault();
+
+    var id = $('input[name=id]').val();
+
+    bootbox.confirm("Delete this room type?", function(result) {
+      if (result) {
+        $(':input').val('');
+        $('#add-room-type button').hide();
+        RoomTypes.remove(id);
+      }
+    });
+  },
+
   'blur form': function(e) {
 
-    var currentHotelId = this._id;
+    // Act only if event is fired by form input elements
+    if (e.target.id !== 'delete-btn') {
+      var currentHotelId = this._id;
 
-    var typeEl = $('input[name=type]'), 
-      summaryEl = $('textarea[name=summary]'),
-      priceEl = $('input[name=price]');
+      var typeEl = $('input[name=type]'), 
+        summaryEl = $('textarea[name=summary]'),
+        priceEl = $('input[name=price]');
 
-    var roomType = {
-      hotelId: currentHotelId,
-      type: typeEl.val(), 
-      summary: summaryEl.val(), 
-      price: priceEl.val()
-    };
+      var roomType = {
+        hotelId: currentHotelId,
+        type: typeEl.val(), 
+        summary: summaryEl.val(), 
+        price: priceEl.val()
+      };
 
-    if (!roomType.type || roomType.type === " ") {
-      showErrorFeedback(typeEl);
-      typeEl.focus();
-      return;
-    }
-
-    $("#add-room-type .alert-success").fadeIn();
-    Meteor.call('addRoomType', roomType, function(error, result)  {
-      if (error)  {
-        throwError(error.reason);
-      } else  {
-        $("#add-room-type .alert-success").text("Saved.").fadeOut(3000);
+      if (!roomType.type || roomType.type === " ") {
+        showErrorFeedback(typeEl);
+        typeEl.focus();
+        return;
       }
 
-    });
+      $("#add-room-type .alert-success").fadeIn();
+      Meteor.call('addRoomType', roomType, function(error, result)  {
+        if (error)  {
+          throwError(error.reason);
+        } else  {
+          $("#add-room-type .alert-success").text("Saved.").fadeOut(3000);
+        }
+
+      });
+    }
   }
 
 });
+
+Template.addRoomTypes.rendered = function() {
+  $('.btn-danger').hide();
+}

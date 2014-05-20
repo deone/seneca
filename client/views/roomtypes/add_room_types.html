@@ -7,7 +7,7 @@
       </div>
       <div class="panel-body">
         {{> errors}}
-        <form role="form" id="add-room-type">
+        <form role="form">
           <div class="form-group has-feedback">
             <label for="type">Room Type</label>
             <input type="text" class="form-control" name="type" placeholder="E.g. Studio, Standard, Deluxe">
@@ -22,6 +22,8 @@
             <label for="price">Price</label>
             <input name="price" type="number" class="form-control" placeholder="In USD">
           </div>
+          <input name="id" type="hidden">
+          <button id="delete-btn" class="btn btn-danger">Delete</button>
         </form>
       </div>
     </div>
