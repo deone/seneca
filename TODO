@@ -7,3 +7,4 @@
 - Move saving feedback to add_room_type template.
 - Attempt showing and hiding the various forms in editHotel instead of using Session.
 - After upgrading Meteor to 0.8.0, .fade (of hotelDeleteModal) stopped fading with modal. Only works in the absence of Router.go(), hence the need to fadeOut() explicitly. Even with explicit fadeOut(), the next page (hotelsList) and everyone clicked from it are frozen as if the modal is still active.
+- We should re-write our javascript without jQuery, for performance sake.
