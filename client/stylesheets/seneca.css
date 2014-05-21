@@ -41,3 +41,12 @@
   border-left: none;
   border-right: none;
 }
+
+.seneca-file-input  {
+  display: inline;
+  margin-top: 150px;
+  margin-left: 400px;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
