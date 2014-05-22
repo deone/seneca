@@ -1,7 +1,6 @@
 RoomTypes = new Meteor.Collection('roomtypes');
 
 RoomTypes.allow({
-  insert: ownsDocument,
   update: ownsDocument,
   remove: ownsDocument
 });

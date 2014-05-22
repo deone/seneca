@@ -50,3 +50,9 @@
   width: 0;
   height: 0;
 }
+
+#photos .panel-body {
+  background: #f8f8f8;
+  height: 370px;
+  text-align: center;
+}
