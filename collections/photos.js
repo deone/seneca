@@ -10,9 +10,9 @@ Photos = new FS.Collection("photos", {
 
 Photos.allow({
   insert: function(userId, doc) {
-    return (userId && doc.metadata.owner === userId);
+    return (userId && doc.owner === userId);
   },
   update: function(userId, doc, fieldNames, modifier) {
-    return (userId === doc.metadata.owner);
+    return (userId === doc.owner);
   }
 });

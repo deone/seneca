@@ -27,9 +27,9 @@ Template.addRoomTypes.events({
   },
 
   'blur form': function(e) {
-
-    // Act only if event is fired by form input elements
+    // Don't attempt to save if event is fired by delete button
     if (e.target.id !== 'delete-btn') {
+
       var currentHotelId = this._id;
 
       var typeEl = $('input[name=type]'), 

@@ -4,10 +4,14 @@ Template.photoUpload.events({
   },
 
   'change .seneca-file-input': function(e)  {
+    var hotelId = this._id;
+
     FS.Utility.eachFile(e, function(file) {
 
       var fsFile = new FS.File(file);
-      fsFile.metadata = {owner: Meteor.userId()};
+
+      fsFile.owner = Meteor.userId();
+      fsFile.hotelId = hotelId;
 
       Photos.insert(fsFile, function(err, fileObj)  {
         console.log(err, fileObj);
