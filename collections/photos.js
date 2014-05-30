@@ -1,5 +1,18 @@
+FS.debug = true;
+
+var thumbnailFormat = {width: 100, height: 100};
+
+var fullPhotoStore = new FS.Store.FileSystem('photos', {path: '~/uploads/full'});
+var thumbnailStore = new FS.Store.FileSystem('thumbs', {
+  path: '~/uploads/thumbs',
+  transformWrite: function(file, readStream, writeStream) {
+    // gm(readStream, file.name).resize('36', '36').stream().pipe(writeStream);
+    readStream.pipe(writeStream);
+  }
+});
+
 Photos = new FS.Collection("photos", {
-  stores: [new FS.Store.FileSystem("photos", {path: "~/uploads"})],
+  stores: [fullPhotoStore, thumbnailStore],
   filter: {
     allow: {
       contentTypes: ['image/*'],
