@@ -9,7 +9,6 @@
     },
     "bootboxjs": {},
     "collectionFS": {},
-    "cfs-ui": {},
-    "graphicsmagick": {}
+    "cfs-ui": {}
   }
 }
