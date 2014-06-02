@@ -1,13 +1,20 @@
-FS.debug = true;
-
 var thumbnailFormat = {width: 100, height: 100};
 
 var fullPhotoStore = new FS.Store.FileSystem('photos', {path: '~/uploads/full'});
 var thumbnailStore = new FS.Store.FileSystem('thumbs', {
   path: '~/uploads/thumbs',
   transformWrite: function(file, readStream, writeStream) {
-    // gm(readStream, file.name).resize('36', '36').stream().pipe(writeStream);
-    readStream.pipe(writeStream);
+    gm(readStream, file.name).resize(thumbnailFormat.width, thumbnailFormat.height).stream(function (err, stdout, stderr)  {
+      if (err) {
+        console.error(err.toString());
+      } else {
+        stderr.on('data', function (err) {
+          console.error(err.toString());
+        });
+        stdout.pipe(writeStream);
+      }
+    });
+    // readStream.pipe(writeStream);
   }
 });
 
