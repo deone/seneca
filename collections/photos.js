@@ -1,7 +1,7 @@
 var thumbnailFormat = {width: 100, height: 100};
 
-var fullPhotoStore = new FS.Store.FileSystem('photos', {path: '~/uploads/full'});
-var thumbnailStore = new FS.Store.FileSystem('thumbs', {
+var fullPhotoStore = new FS.Store.FileSystem('photo', {path: '~/uploads/photos'});
+var thumbnailStore = new FS.Store.FileSystem('thumb', {
   path: '~/uploads/thumbs',
   transformWrite: function(file, readStream, writeStream) {
     gm(readStream, file.name).resize(thumbnailFormat.width, thumbnailFormat.height).stream(function (err, stdout, stderr)  {
