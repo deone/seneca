@@ -20,3 +20,9 @@ Template.photoUpload.events({
     });
   }
 });
+
+Template.photoUpload.helpers({
+  photos: function()  {
+    return Photos.find({hotelId: this._id});
+  }
+});
