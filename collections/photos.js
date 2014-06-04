@@ -25,12 +25,12 @@ var thumbnailStore = new FS.Store.FileSystem('thumb', {
 }); */
 
 // cfs-s3
-var s3options = {
-  region: "us-west-2",
-  accessKeyId: "AKIAI2MDBBG53UFYCBGQ", //required if environment variables are not set
-  secretAccessKey: "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", //required if environment variables are not set
-  bucket: "seneca", //required
-}
+var s3options = Meteor.isServer ? {
+  region: Meteor.settings.AWS.region,
+  accessKeyId: Meteor.settings.AWS.accessKeyId,
+  secretAccessKey: Meteor.settings.AWS.secretAccessKey,
+  bucket: 'seneca',
+} : {};
 
 var photoStore = new FS.Store.S3("full", _.extend({}, s3options, {folder: 'full/'}));
 var thumbStore = new FS.Store.S3("thumb", _.extend({}, s3options, {folder: 'thumbs/', transformWrite: thumbTransform}));
