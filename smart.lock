@@ -12,7 +12,6 @@
       "bootboxjs": {},
       "collectionFS": {},
       "cfs-ui": {},
-      "knox": {},
       "cfs-s3": {}
     },
     "packages": {
@@ -50,11 +49,6 @@
         "git": "https://github.com/CollectionFS/Meteor-cfs-ui.git",
         "tag": "v0.1.0",
         "commit": "41feb979e88cb2cf4c6f2934ba58ae0bb4e3dddb"
-      },
-      "knox": {
-        "git": "https://github.com/ewindso/meteor-knox.git",
-        "tag": "v0.8.5.2",
-        "commit": "62c778c40f89884cb10cfd2097e614e01ca8b8cc"
       },
       "cfs-s3": {
         "git": "https://github.com/CollectionFS/Meteor-cfs-s3.git",
