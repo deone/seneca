@@ -10,6 +10,7 @@
     "bootboxjs": {},
     "collectionFS": {},
     "cfs-ui": {},
-    "knox": {}
+    "knox": {},
+    "cfs-s3": {}
   }
 }

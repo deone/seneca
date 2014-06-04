@@ -12,7 +12,8 @@
       "bootboxjs": {},
       "collectionFS": {},
       "cfs-ui": {},
-      "knox": {}
+      "knox": {},
+      "cfs-s3": {}
     },
     "packages": {
       "iron-router": {
@@ -55,6 +56,11 @@
         "tag": "v0.8.5.2",
         "commit": "62c778c40f89884cb10cfd2097e614e01ca8b8cc"
       },
+      "cfs-s3": {
+        "git": "https://github.com/CollectionFS/Meteor-cfs-s3.git",
+        "tag": "v0.0.29",
+        "commit": "97d3c544165c766115f2b91a6aaca54a7438a558"
+      },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
         "tag": "v0.2.4",
@@ -95,15 +101,15 @@
         "tag": "v0.0.12",
         "commit": "774bf581e0f3da269dc842672ed6c2da09fd2bdf"
       },
-      "cfs-filesaver": {
-        "git": "https://github.com/CollectionFS/Meteor-cfs-filesaver.git",
-        "tag": "v0.0.3",
-        "commit": "29cd7ae4dab138aa5e3792485945e742c46fc330"
-      },
       "cfs-storage-adapter": {
         "git": "https://github.com/CollectionFS/Meteor-cfs-storage-adapter.git",
         "tag": "v0.0.26",
         "commit": "cb9808ec519f8673d2cc4cc881b6eda9e56bdead"
+      },
+      "cfs-filesaver": {
+        "git": "https://github.com/CollectionFS/Meteor-cfs-filesaver.git",
+        "tag": "v0.0.3",
+        "commit": "29cd7ae4dab138aa5e3792485945e742c46fc330"
       },
       "http-methods": {
         "git": "https://github.com/CollectionFS/Meteor-http-methods.git",
