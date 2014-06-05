@@ -5,3 +5,7 @@ Meteor.publish('hotels', function() {
 Meteor.publish('roomtypes', function(hotelId) {
   return RoomTypes.find({hotelId: hotelId});
 });
+
+Meteor.publish('photos', function(hotelId) {
+  return Photos.find({hotelId: hotelId});
+});
