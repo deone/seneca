@@ -1,3 +1,5 @@
+FS.debug = true;
+
 var thumbnailFormat = {width: 100, height: 100};
 
 var thumbTransform = function(file, readStream, writeStream) {
@@ -36,7 +38,7 @@ var photoStore = new FS.Store.S3("full", _.extend({}, s3options, {folder: 'full/
 var thumbStore = new FS.Store.S3("thumb", _.extend({}, s3options, {folder: 'thumbs/', transformWrite: thumbTransform}));
 
 Photos = new FS.Collection("photos", {
-  stores: [photoStore, thumbStore],
+  stores: [thumbStore, photoStore],
   filter: {
     allow: {
       contentTypes: ['image/*'],
