@@ -4,20 +4,10 @@
 # but you can also edit it by hand.
 
 standard-app-packages
-iron-router
-spin
+iron:router@0.9.1
+sacha:spin@2.0.4
 accounts-password
-bootstrap-3
-accounts-ui-bootstrap-3
-bootboxjs
-collectionFS
-cfs-filesystem
-cfs-graphicsmagick
-cfs-ui
-cfs-s3
-velocity-quick-start
+mizzao:bootboxjs@4.2.1-master.1
+ian:accounts-ui-bootstrap-3
+ian:bootstrap-3
 
-jasmine-unit
-mocha-web-velocity
-jasmine
-velocity-html-reporter
